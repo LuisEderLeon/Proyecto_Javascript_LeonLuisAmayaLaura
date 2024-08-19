@@ -25,7 +25,9 @@ function listStuff(){
             infoButton.classList.add("info")
 
             const moreInfo = function() {
-                document.querySelector("main").textContent = JSON.stringify(information[this.id])
+                document.querySelector("main").innerHTML = ""
+                for (let key in information[this.id])
+                document.querySelector("main").innerHTML += `<hr> ${key}: ${information[this.id][key]}`
             };
             
             infoButton.addEventListener('click', moreInfo);
