@@ -18,19 +18,13 @@ function listStuff(){
             } else {
                 div.textContent = element.name;
             }
-            let infoButton = document.createElement('button')
+            let infoButton = document.createElement('a')
             infoButton.textContent = "Mas informacion"
             infoButton.id = id;
             id += 1;
             infoButton.classList.add("info")
+            infoButton.href = `http://127.0.0.1:5500/item.html?type=${url}&id=${id + ((page - 1) * 10)}`
 
-            const moreInfo = function() {
-                document.querySelector("main").innerHTML = ""
-                for (let key in information[this.id])
-                document.querySelector("main").innerHTML += `<hr> ${key}: ${information[this.id][key]}`
-            };
-            
-            infoButton.addEventListener('click', moreInfo);
             div.appendChild(infoButton)
             listElement.appendChild(div);
         });
