@@ -23,7 +23,7 @@ function listStuff(){
             infoButton.id = id;
             id += 1;
             infoButton.classList.add("info")
-            infoButton.href = `http://127.0.0.1:5500/item.html?type=${url}&id=${id + ((page - 1) * 10)}`
+            infoButton.href = `item.html?type=${url}&id=${id + ((page - 1) * 10)}`
 
             div.appendChild(infoButton)
             listElement.appendChild(div);
