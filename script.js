@@ -21,7 +21,7 @@ function listStuff(){
             }
             div.appendChild(p)
             let infoButton = document.createElement('a')
-            infoButton.textContent = "Mas informacion"
+            infoButton.innerHTML = '<img src="assets/more.svg" alt="logo de la página">'
             infoButton.id = id;
             id += 1;
             infoButton.classList.add("info")
@@ -30,11 +30,13 @@ function listStuff(){
             div.appendChild(infoButton)
             listElement.appendChild(div);
         });
+        const buttonsSection = document.querySelector("section#buttons")
+        buttonsSection.replaceChildren()
         if (value.previous != null) {
             const previousButton = document.createElement('button');
             previousButton.id = 'previous';
             previousButton.textContent = 'Anterior';
-            listElement.appendChild(previousButton);
+            buttonsSection.appendChild(previousButton);
         
             const previousPage = function() {
                 page -= 1;
@@ -49,7 +51,7 @@ function listStuff(){
             const nextButton = document.createElement('button');
             nextButton.id = 'next';
             nextButton.textContent = 'Siguiente';
-            listElement.appendChild(nextButton);
+            buttonsSection.appendChild(nextButton);
         
             const nextPage = function() {
                 page += 1;

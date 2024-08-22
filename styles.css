@@ -57,7 +57,7 @@ header{
 }
 
 .bienvenida{
-    margin-top: 200px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,6 +96,50 @@ button{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+#list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100vw;
+}
+
+#list div{
+    color: #000;
+    background-color: #ffe91ff1;
+    padding: 10px;
+    border-radius: 16px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#list div:hover{
+    background-color: #f2f2f2;
+}
+
+#buttons{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#buttons button{
+    color: #F2F2F2;
+    font-size: 1.1em;
+}
+
+#buttons button:hover{
+    color: #FFE81F;
+    font-size: 1.1em;
 }
 
 @keyframes fadeInTop{
