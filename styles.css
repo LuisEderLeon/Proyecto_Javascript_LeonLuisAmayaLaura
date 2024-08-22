@@ -9,6 +9,22 @@
     box-sizing: border-box;
 }
 
+.bodyItems{
+    background-image: url(images/descarga.jpeg);
+    position: relative;
+}
+
+.bodyItems::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;  
+}
+
 .video-background{
     position: absolute;
     top: 0;
@@ -135,11 +151,49 @@ button{
 #buttons button{
     color: #F2F2F2;
     font-size: 1.1em;
+    text-decoration: none;
+    text-align: center;
 }
 
-#buttons button:hover{
+.btnHome{
+    color: #F2F2F2;
+    font-size: 1.1em;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#buttons button,.btnHome:hover{
     color: #FFE81F;
     font-size: 1.1em;
+}
+
+.details{
+    color: #F2F2F2;
+    margin: auto;
+    margin-top: 60px;
+    border: #F2D06B 1px solid;
+    border-radius: 16px;
+    padding: 30px;
+    min-height: 80vh;
+    width: 700px;
+    animation: fadeInTop 2s ease forwards;
+}
+
+.details p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+h1{
+    text-align: center;
+    color:#FFE81F;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 50px;
 }
 
 @keyframes fadeInTop{
