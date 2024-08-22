@@ -13,11 +13,13 @@ function listStuff(){
         listElement.replaceChildren();
         value.results.forEach(element => {
             const div = document.createElement('div');
+            const p = document.createElement('p')
             if (url === "films") {
-                div.textContent = element.title;
+                p.textContent = element.title;
             } else {
-                div.textContent = element.name;
+                p.textContent = element.name;
             }
+            div.appendChild(p)
             let infoButton = document.createElement('a')
             infoButton.textContent = "Mas informacion"
             infoButton.id = id;
