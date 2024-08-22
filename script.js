@@ -6,12 +6,12 @@ function listStuff(){
     let listElement = document.querySelector("section#list")
     switch (url) {
         case "people":
-            document.querySelector("div#category section").style.display = "block"
+            document.querySelector("div#Category section").style.display = "block"
             break;
     
         default:
-            document.querySelector("div#category section select").selectedIndex = 0;
-            document.querySelector("div#category section").style.display = "none"
+            document.querySelector("div#Category section select").selectedIndex = 0;
+            document.querySelector("div#Category section").style.display = "none"
             break;
     }
 
@@ -19,7 +19,7 @@ function listStuff(){
     promise.then((value) => {
         let id = 0;
         information = value.results;
-        let color = document.querySelector("div#category section select").value
+        let color = document.querySelector("div#Category section select").value
 
         listElement.replaceChildren();
         information.forEach(element => {
