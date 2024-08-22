@@ -25,8 +25,8 @@ function listStuff(){
             infoButton.id = id;
             id += 1;
             infoButton.classList.add("info")
-            infoButton.href = `item.html?type=${url}&id=${id + ((page - 1) * 10)}`
-
+            infoButton.href = `item.html?type=${url}&id=${element.url.slice(element.url.lastIndexOf("/", element.url.length - 2) + 1, (element.url.length - 1))}`
+            
             div.appendChild(infoButton)
             listElement.appendChild(div);
         });

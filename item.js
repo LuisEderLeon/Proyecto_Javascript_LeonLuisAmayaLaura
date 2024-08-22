@@ -7,27 +7,35 @@ promise.then((value) => {
     let list = document.querySelector("div");
 
     for(key in value){
+        let div = document.createElement("div")
+        let span = document.createElement("span")
         let paragraph = document.createElement("p")
-        paragraph.textContent += `${key.charAt(0).toUpperCase() + key.slice(1)}: `
+        div.id = key;
+        span.textContent += `${key.charAt(0).toUpperCase() + key.slice(1)}: `
         if (Array.isArray(value[key])){
-            let saveKey = key.charAt(0).toUpperCase() + key.slice(1) + ": ";
             value[key].forEach(element => {
                 let content = fetch(element).then((response) => response.json());
                 content.then((data) => {
-                    paragraph.innerHTML += `<br>- ${data.name || data.title}`
+                    paragraph.innerHTML += `- ${data.name || data.title}<br>`
                 })
             });
         }else {
             if (/^https:\/\/swapi/.test(value[key])){
                 let content = fetch(value[key]).then((response) => response.json());
-                let saveKey = key.charAt(0).toUpperCase() + key.slice(1) + ": ";
                 content.then((data) => {
                     paragraph.textContent += `${data.name || data.title}`
                 });
             } else{
                 paragraph.innerHTML += `${value[key]}`
             }
-        }
-        list.appendChild(paragraph)
+        }   
+        div.appendChild(span)
+        div.appendChild(paragraph)
+        list.appendChild(div)
     }
+
+    list.removeChild(document.getElementById("url"))
+    list.removeChild(document.getElementById("created"))
+    list.removeChild(document.getElementById("edited"))
+
 });
