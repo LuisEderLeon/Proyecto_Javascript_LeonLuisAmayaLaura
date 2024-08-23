@@ -358,3 +358,110 @@ span{
     }
 }
 
+@media (min-width: 426px) and (max-width: 1024px) {
+    
+    .logo {
+        width: 30%;
+    }
+
+    .bienvenida p {
+        padding-top: 100px;
+        text-align: center;
+        font-size: 1.3em;
+        width: 60%;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .pregunta {
+        padding-top: 50px;
+        font-size: 1.3em;
+    }
+    
+    
+    .bienvenida {
+        margin-top: 50px;
+    }
+    
+    #category select {
+        height: 50px;
+        width: 150px;
+        margin-right: 10px;
+    }
+    
+    option {
+        font-size: 1.2em;
+    }
+
+    #list {
+        margin-top: 20px;
+        display: grid;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+    
+    #list div {
+        font-size: 1em;
+    }
+    
+    #buttons {
+        padding: 30px;
+        padding-top: 20px;
+    }
+    
+    #buttons button {
+        font-size: 1.2em;
+    }
+    
+    .btnHome {
+        color: #F2F2F2;
+        font-size: 1.2em;
+    }
+    
+    .details {
+        color: #F2F2F2;
+        margin: auto;
+        margin-top: 50px;
+        padding: 30px;
+        min-height: 70vh;
+        width: 85%;
+    }
+    
+    .details p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.2em;
+    }
+    
+    h1 {
+        color: #FFE81F;
+        font-size: 2em;
+        padding-bottom: 15px;
+    }
+
+    #Category {
+        margin-top: 40px;
+    }
+
+    #searchForm {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #searchField {
+        width: 70%;
+    }
+}
