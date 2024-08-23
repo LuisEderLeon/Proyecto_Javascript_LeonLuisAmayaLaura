@@ -31,7 +31,7 @@
 ## Instalación
 1. Clona este repositorio, para obtener una copia local del proyecto:
    ```bash
-   git clone https://github.com/LuisEderLeon/SWAPI
+   git clone https://github.com/LuisEderLeon/SWAPI](https://github.com/LuisEderLeon/Proyecto_Javascript_LeonLuisAmayaLaura
 2. Abre el archivo principal **index.html** en tu navegador para empezar a explorar.
 
 ## Estructura
